@@ -1,0 +1,342 @@
+/* ============================================
+   Responsive Design — Media Queries
+   ============================================ */
+
+/* Tablet Landscape (≤1200px) */
+@media (max-width: 1200px) {
+    :root {
+        --fs-6xl: 3.5rem;
+        --fs-5xl: 2.8rem;
+    }
+
+    .hero-content {
+        gap: var(--space-2xl);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr repeat(2, 1fr);
+    }
+
+    .footer-column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .score-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .score-stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablet Portrait (≤992px) */
+@media (max-width: 992px) {
+    :root {
+        --fs-6xl: 3rem;
+        --fs-5xl: 2.5rem;
+        --fs-4xl: 2rem;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin: 0 auto var(--space-2xl);
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .hero-product-showcase {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .products-page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+    }
+
+    .filter-group {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding: var(--space-md);
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius-md);
+    }
+
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .product-gallery {
+        position: static;
+    }
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        position: static;
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+    }
+
+    .about-values {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .audit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .score-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mobile Nav */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(30px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xl);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-base);
+        z-index: var(--z-modal);
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .nav-links a {
+        font-size: var(--fs-xl);
+    }
+
+    .nav-hamburger {
+        display: flex;
+        z-index: calc(var(--z-modal) + 1);
+    }
+}
+
+/* Mobile Large (≤768px) */
+@media (max-width: 768px) {
+    :root {
+        --fs-6xl: 2.5rem;
+        --fs-5xl: 2rem;
+        --fs-4xl: 1.75rem;
+        --fs-3xl: 1.5rem;
+    }
+
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter {
+        padding: var(--space-2xl);
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .brands-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .filters-sidebar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cart-item {
+        grid-template-columns: 80px 1fr;
+        gap: var(--space-md);
+    }
+
+    .cart-item-price,
+    .cart-item-remove {
+        grid-column: 2;
+    }
+
+    .product-features {
+        grid-template-columns: 1fr;
+    }
+
+    .product-actions {
+        flex-direction: column;
+    }
+
+    .hero-stats {
+        gap: var(--space-xl);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .seo-url-form {
+        flex-direction: column;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .og-preview-card {
+        max-width: 100%;
+    }
+}
+
+/* Mobile Small (≤480px) */
+@media (max-width: 480px) {
+    :root {
+        --fs-6xl: 2rem;
+        --fs-5xl: 1.75rem;
+        --fs-4xl: 1.5rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--space-md);
+        align-items: center;
+    }
+
+    .hero-floating-badge {
+        display: none;
+    }
+
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .score-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .products-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-actions {
+        gap: var(--space-sm);
+    }
+}

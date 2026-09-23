@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SEO Dashboard — NovaTech | SEO Analysis & Audit Tool</title>
+    <meta name="description" content="Analyze the SEO health of any page with our built-in SEO audit tool. Check meta tags, headings, keywords, structured data, Open Graph, and more.">
+    <meta name="keywords" content="SEO analysis, SEO audit, meta tags checker, keyword density, structured data, Open Graph preview, SEO score">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://novatech-store.com/seo-dashboard.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SEO Dashboard — NovaTech">
+    <meta property="og:description" content="Built-in SEO audit tool to analyze page health.">
+    <meta property="og:url" content="https://novatech-store.com/seo-dashboard.html">
+    <meta property="og:site_name" content="NovaTech">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SEO Dashboard — NovaTech">
+    <meta name="twitter:description" content="Analyze SEO health with our built-in audit tool.">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23667eea'/><text x='50' y='68' font-size='40' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="page-loader" id="pageLoader">
+        <div class="page-loader-content">
+            <div class="page-loader-logo">N</div>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="NovaTech Home">
+                <div class="nav-logo-icon">N</div>
+                <span class="nav-logo-text">Nova<span>Tech</span></span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="seo-dashboard.html" class="active">SEO Dashboard</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="searchBtn" aria-label="Search">🔍</button>
+                <a href="cart.html" class="nav-cart-btn" aria-label="Shopping cart">
+                    🛒
+                    <span class="cart-count" id="cartCount" style="display:none;">0</span>
+                </a>
+                <div class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="search-modal" id="searchModal" role="dialog" aria-label="Search">
+        <div class="search-modal-inner">
+            <input type="text" class="search-modal-input" placeholder="Search products..." aria-label="Search">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <main>
+        <section class="page-hero" aria-label="SEO Dashboard header">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">›</span>
+                    <span class="current">SEO Dashboard</span>
+                </nav>
+                <h1>SEO Analysis Dashboard</h1>
+                <p>Analyze the SEO health of any page on this website. Get detailed audits, keyword analysis, and optimization recommendations.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="dashboard-layout">
+                <!-- URL Input -->
+                <div class="seo-input-section fade-in">
+                    <h2>🔍 Analyze a Page</h2>
+                    <p>Enter a page URL or select from quick links below to run an SEO audit.</p>
+                    <form class="seo-url-form" id="seoAnalyzeForm">
+                        <input type="text" id="seoUrlInput" placeholder="Enter page URL (e.g., index.html)" value="index.html" aria-label="Page URL to analyze">
+                        <button type="submit" class="btn btn-primary">Analyze SEO</button>
+                    </form>
+                    <div class="quick-links">
+                        <button class="quick-link" data-url="index.html">🏠 Home Page</button>
+                        <button class="quick-link" data-url="products.html">🛍️ Products</button>
+                        <button class="quick-link" data-url="about.html">ℹ️ About</button>
+                        <button class="quick-link" data-url="contact.html">📧 Contact</button>
+                        <button class="quick-link" data-url="seo-dashboard.html">📊 This Page</button>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div class="dashboard-loading" id="dashboardLoading" style="display:none;">
+                    <div class="loader"></div>
+                    <p>Analyzing SEO health...</p>
+                </div>
+
+                <!-- Results -->
+                <div class="dashboard-results" id="dashboardResults">
+                    <!-- Score Overview -->
+                    <div class="score-overview fade-in">
+                        <div class="score-gauge" id="scoreGauge">
+                            <!-- Rendered by JS -->
+                        </div>
+                        <div class="score-stats" id="scoreStats">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Audit Checklist -->
+                    <div id="auditChecklist">
+                        <!-- Rendered by JS -->
+                    </div>
+
+                    <!-- Keyword Analysis -->
+                    <div class="keyword-section fade-in">
+                        <h3>📊 Keyword Analysis</h3>
+                        <div id="keywordAnalysis">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- OG Preview -->
+                    <div class="og-preview-section fade-in">
+                        <h3>📱 Social Media Preview</h3>
+                        <div id="ogPreview">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Sitemap Viewer -->
+                    <div class="sitemap-section fade-in">
+                        <h3>🗺️ XML Sitemap</h3>
+                        <div class="sitemap-code">
+<span class="tag">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;urlset</span> <span class="attr">xmlns</span>=<span class="value">"http://www.sitemaps.org/schemas/sitemap/0.9"</span><span class="tag">&gt;</span>
+
+  <span class="tag">&lt;url&gt;</span>
+    <span class="tag">&lt;loc&gt;</span><span class="value">https://luxestore.com/</span><span class="tag">&lt;/loc&gt;</span>
+    <span class="tag">&lt;lastmod&gt;</span><span class="value">2024-01-15</span><span class="tag">&lt;/lastmod&gt;</span>
+    <span class="tag">&lt;changefreq&gt;</span><span class="value">daily</span><span class="tag">&lt;/changefreq&gt;</span>
+    <span class="tag">&lt;priority&gt;</span><span class="value">1.0</span><span class="tag">&lt;/priority&gt;</span>
+  <span class="tag">&lt;/url&gt;</span>
+
+  <span class="tag">&lt;url&gt;</span>
+    <span class="tag">&lt;loc&gt;</span><span class="value">https://luxestore.com/products.html</span><span class="tag">&lt;/loc&gt;</span>
+    <span class="tag">&lt;lastmod&gt;</span><span class="value">2024-01-15</span><span class="tag">&lt;/lastmod&gt;</span>
+    <span class="tag">&lt;changefreq&gt;</span><span class="value">daily</span><span class="tag">&lt;/changefreq&gt;</span>
+    <span class="tag">&lt;priority&gt;</span><span class="value">0.9</span><span class="tag">&lt;/priority&gt;</span>
+  <span class="tag">&lt;/url&gt;</span>
+
+  <span class="tag">&lt;url&gt;</span>
+    <span class="tag">&lt;loc&gt;</span><span class="value">https://luxestore.com/about.html</span><span class="tag">&lt;/loc&gt;</span>
+    <span class="tag">&lt;lastmod&gt;</span><span class="value">2024-01-10</span><span class="tag">&lt;/lastmod&gt;</span>
+    <span class="tag">&lt;changefreq&gt;</span><span class="value">monthly</span><span class="tag">&lt;/changefreq&gt;</span>
+    <span class="tag">&lt;priority&gt;</span><span class="value">0.7</span><span class="tag">&lt;/priority&gt;</span>
+  <span class="tag">&lt;/url&gt;</span>
+
+  <span class="tag">&lt;url&gt;</span>
+    <span class="tag">&lt;loc&gt;</span><span class="value">https://luxestore.com/contact.html</span><span class="tag">&lt;/loc&gt;</span>
+    <span class="tag">&lt;lastmod&gt;</span><span class="value">2024-01-10</span><span class="tag">&lt;/lastmod&gt;</span>
+    <span class="tag">&lt;changefreq&gt;</span><span class="value">monthly</span><span class="tag">&lt;/changefreq&gt;</span>
+    <span class="tag">&lt;priority&gt;</span><span class="value">0.6</span><span class="tag">&lt;/priority&gt;</span>
+  <span class="tag">&lt;/url&gt;</span>
+
+  <span class="tag">&lt;url&gt;</span>
+    <span class="tag">&lt;loc&gt;</span><span class="value">https://luxestore.com/seo-dashboard.html</span><span class="tag">&lt;/loc&gt;</span>
+    <span class="tag">&lt;lastmod&gt;</span><span class="value">2024-01-15</span><span class="tag">&lt;/lastmod&gt;</span>
+    <span class="tag">&lt;changefreq&gt;</span><span class="value">weekly</span><span class="tag">&lt;/changefreq&gt;</span>
+    <span class="tag">&lt;priority&gt;</span><span class="value">0.5</span><span class="tag">&lt;/priority&gt;</span>
+  <span class="tag">&lt;/url&gt;</span>
+
+<span class="tag">&lt;/urlset&gt;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">N</div>
+                        <span class="nav-logo-text">Nova<span>Tech</span></span>
+                    </a>
+                    <p>Your premium destination for cutting-edge technology and electronics.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html">Audio</a></li>
+                        <li><a href="products.html">Computers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NovaTech. All rights reserved. University SEO Project.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/seo-analyzer.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/schema.js"></script>
+</body>
+</html>

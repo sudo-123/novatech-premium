@@ -1,0 +1,13 @@
+# NovaTech Robots.txt
+# https://novatech-store.com
+
+User-agent: *
+Allow: /
+Disallow: /cart.html
+Disallow: /checkout/
+
+# Sitemap
+Sitemap: https://novatech-store.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>NovaTech — Premium Tech & Electronics | Shop Latest Gadgets Online</title>
+    <meta name="description" content="Discover cutting-edge electronics and premium tech at NovaTech. Shop headphones, laptops, smartwatches, and more with free shipping on orders over $100.">
+    <meta name="keywords" content="premium tech, electronics, headphones, laptop, smartwatch, gadgets, online store, gaming, audio, NovaTech">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NovaTech">
+    <link rel="canonical" href="https://novatech-store.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NovaTech — Premium Tech & Electronics">
+    <meta property="og:description" content="Discover cutting-edge electronics and premium tech at NovaTech. Free shipping on orders over $100.">
+    <meta property="og:url" content="https://novatech-store.com/">
+    <meta property="og:site_name" content="NovaTech">
+    <meta property="og:image" content="https://novatech-store.com/assets/images/og-home.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NovaTech — Premium Tech & Electronics">
+    <meta name="twitter:description" content="Discover cutting-edge electronics and premium tech at NovaTech.">
+    <meta name="twitter:image" content="https://novatech-store.com/assets/images/og-home.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='20' width='100' height='100' fill='%23667eea'/><text x='50' y='68' font-size='40' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900'>N</text></svg>">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="page-loader-content">
+            <div class="page-loader-logo">N</div>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="NovaTech Home">
+                <div class="nav-logo-icon">N</div>
+                <span class="nav-logo-text">Nova<span>Tech</span></span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="seo-dashboard.html">SEO Dashboard</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="searchBtn" aria-label="Search products">🔍</button>
+                <a href="cart.html" class="nav-cart-btn" aria-label="Shopping cart">
+                    🛒
+                    <span class="cart-count" id="cartCount" style="display:none;">0</span>
+                </a>
+                <div class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Modal -->
+    <div class="search-modal" id="searchModal" role="dialog" aria-label="Search products">
+        <div class="search-modal-inner">
+            <input type="text" class="search-modal-input" placeholder="Search products..." aria-label="Search products">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-label="Welcome to NovaTech">
+            <div class="hero-bg-orbs">
+                <div class="hero-orb"></div>
+                <div class="hero-orb"></div>
+                <div class="hero-orb"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            <span class="hero-badge-dot"></span>
+                            New Collection 2024
+                        </div>
+                        <h1>
+                            Discover<br>
+                            <span class="highlight">Premium</span> Tech<br>
+                            <span class="highlight-2">Innovation</span>
+                        </h1>
+                        <p class="hero-description">
+                            Explore the latest cutting-edge electronics crafted for those who demand excellence. From immersive audio to powerful computing — elevate your tech experience.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="products.html" class="btn btn-primary btn-lg">Shop Now →</a>
+                            <a href="about.html" class="btn btn-secondary btn-lg">Learn More</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <div class="hero-stat-number" data-count="12000" data-suffix="+">0</div>
+                                <div class="hero-stat-label">Happy Customers</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-number" data-count="500" data-suffix="+">0</div>
+                                <div class="hero-stat-label">Premium Products</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-number" data-count="98" data-suffix="%">0</div>
+                                <div class="hero-stat-label">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual fade-in">
+                        <div class="hero-product-showcase">
+                            <div class="hero-product-card tilt-card">
+                                <div class="hero-product-image">
+                                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop" alt="AuraWave Pro Headphones — Premium wireless headphones with noise cancellation">
+                                </div>
+                                <div style="position:relative;z-index:1;">
+                                    <h2 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700;">AuraWave Pro</h2>
+                                    <p style="color:var(--text-muted);font-size:0.875rem;">Wireless Premium Headphones</p>
+                                    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:1rem;">
+                                        <span style="font-family:var(--font-display);font-size:1.5rem;font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;">$299.99</span>
+                                        <a href="product-detail.html?id=1" class="btn btn-primary btn-sm">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hero-floating-badge badge-1">
+                                <div class="badge-value">★ 4.8</div>
+                                <div class="badge-label">Top Rated</div>
+                            </div>
+                            <div class="hero-floating-badge badge-2">
+                                <div class="badge-value">🚚 Free</div>
+                                <div class="badge-label">Shipping</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands -->
+        <section class="brands-section" aria-label="Trusted brands">
+            <div class="container">
+                <div class="brands-grid">
+                    <span class="brand-item">TechVault</span>
+                    <span class="brand-item">SonicLabs</span>
+                    <span class="brand-item">PixelCore</span>
+                    <span class="brand-item">NexGen</span>
+                    <span class="brand-item">AuraWave</span>
+                    <span class="brand-item">ProShot</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section" id="categories" aria-label="Shop by category">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Shop by Category</h2>
+                    <p>Explore our curated collection of premium tech across every category.</p>
+                </div>
+                <div class="categories-grid stagger-children" id="categoriesGrid">
+                    <a href="products.html" class="category-card">
+                        <div class="category-icon">🎧</div>
+                        <h3>Audio</h3>
+                        <p>Headphones, Speakers & Earbuds</p>
+                    </a>
+                    <a href="products.html" class="category-card">
+                        <div class="category-icon">💻</div>
+                        <h3>Computers</h3>
+                        <p>Laptops, Tablets & Desktops</p>
+                    </a>
+                    <a href="products.html" class="category-card">
+                        <div class="category-icon">🎮</div>
+                        <h3>Gaming</h3>
+                        <p>Mice, Keyboards & Accessories</p>
+                    </a>
+                    <a href="products.html" class="category-card">
+                        <div class="category-icon">📷</div>
+                        <h3>Cameras</h3>
+                        <p>Drones, Mirrorless & Action</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="section" id="featuredProducts" aria-label="Featured products">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Featured Products</h2>
+                    <p>Handpicked selections of our most popular and highest-rated tech.</p>
+                </div>
+                <div class="products-grid" id="homeProductsGrid">
+                    <!-- Rendered by JS -->
+                </div>
+                <div class="text-center mt-xl fade-in">
+                    <a href="products.html" class="btn btn-secondary btn-lg">View All Products →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Why Choose Us -->
+        <section class="section" id="features" aria-label="Why choose NovaTech">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Why Choose NovaTech</h2>
+                    <p>We go above and beyond to deliver an exceptional shopping experience.</p>
+                </div>
+                <div class="features-grid stagger-children">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Free Express Shipping</h3>
+                        <p>Free shipping on all orders over $100. Express delivery in 2-3 business days to your doorstep.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>2-Year Warranty</h3>
+                        <p>Every product comes with a comprehensive 2-year warranty. Your satisfaction is our guarantee.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>30-Day Returns</h3>
+                        <p>Not satisfied? Return any product within 30 days for a full refund. No questions asked.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section" id="testimonials" aria-label="Customer testimonials">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>What Our Customers Say</h2>
+                    <p>Real reviews from real customers who love their NovaTech purchases.</p>
+                </div>
+                <div class="testimonials-slider stagger-children">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The AuraWave Pro headphones are incredible! The noise cancellation is top-notch and the sound quality is studio-grade. Worth every penny."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">A</div>
+                            <div class="testimonial-info">
+                                <h4>Alex Rivera</h4>
+                                <p>Audio Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Fast shipping, premium packaging, and the NexGen Smart Watch exceeded my expectations. NovaTech is my go-to for tech purchases."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">S</div>
+                            <div class="testimonial-info">
+                                <h4>Sarah Chen</h4>
+                                <p>Product Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The PixelBook Pro is a beast for development work. Blazing fast, gorgeous display, and the build quality is unmatched. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">M</div>
+                            <div class="testimonial-info">
+                                <h4>Marcus Johnson</h4>
+                                <p>Software Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="section" id="newsletter" aria-label="Newsletter signup">
+            <div class="container">
+                <div class="newsletter fade-in">
+                    <h2>Stay in the Loop</h2>
+                    <p>Subscribe for exclusive deals, early access to new products, and tech insights.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Thanks for subscribing!', 'success');">
+                        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">N</div>
+                        <span class="nav-logo-text">Nova<span>Tech</span></span>
+                    </a>
+                    <p>Your premium destination for cutting-edge technology and electronics. Curated products, exceptional service.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html">Audio</a></li>
+                        <li><a href="products.html">Computers</a></li>
+                        <li><a href="products.html">Gaming</a></li>
+                        <li><a href="products.html">Cameras</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="seo-dashboard.html">SEO Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NovaTech. All rights reserved. University SEO Project.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/schema.js"></script>
+    <script>
+        // Render featured products on home page
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProductsGrid('homeProductsGrid', ProductData, 8);
+        });
+    </script>
+</body>
+</html>
